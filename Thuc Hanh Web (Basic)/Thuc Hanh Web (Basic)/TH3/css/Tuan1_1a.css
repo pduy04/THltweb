@@ -1,0 +1,45 @@
+*{
+	font-family: Pacifico;
+
+}
+
+#tieude{
+	text-align: center;
+	color: red;
+}
+hr{
+	width: 60%;
+	color: #2907FA;
+}
+#left{
+	position: relative;
+}
+#right{
+	position:absolute;
+	left: 400px; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-style: bold;
+}
+
+.bai2{
+	text-align: right;
+
+}
+
+.blinking{
+        animation:blinkingText 1.5s infinite;
+        font-size: 20px;
+    }
+
+    @keyframes blinkingText{
+        0%{     color: #F10E0E;    }
+        49%{    color: transparent; }
+        50%{    color: transparent; }
+        99%{    color:transparent;  }
+        100%{   color: #47F40B;    }
+    }
+

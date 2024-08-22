@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    background: linear-gradient(90deg, #667db6 0%, #0082c8 33%, #0082c8 66%, #667db6 100%);
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+.header h1{
+    padding-left: 10px;
+}
+.menu ul{
+
+    margin-left: 15px;
+    width: 90%;
+    list-style: none;
+}
+.menu li{
+    background: linear-gradient(90deg, #667db6 0%, #0082c8 33%, #0082c8 66%, #667db6 100%);
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    
+}
+
+.content{
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.content_min{
+    width: 90%;
+    margin: auto;
+}
+
+.menu a{
+    padding-left: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.4s;
+    display: block;
+}
+.menu a:hover{
+    background:linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+.cont{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cont a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+.cont a:hover{
+    color: rgb(84, 98, 228);
+}
+
+.content::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* [class *="col-"]{
+    float: left;
+
+} */
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+/* .col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;} */
+.col-3 {width: 25%;}
+.col-6 {width: 50%;} 
+/* .col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;} */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .content{
+    flex-direction: column;
+  }
+}
+ .chitiet{
+    text-align: end;
+}
+.content img{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.footer{
+    background: linear-gradient(90deg, #667db6 0%, #0082c8 33%, #0082c8 66%, #667db6 100%);
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+}
+.footer p{
+    text-align: center;
+    color: #ffffff;
+}

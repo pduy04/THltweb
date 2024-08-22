@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TH3-Bai6.css">
+    <title>Document</title>
+
+    <script>
+        function xemCung(){
+            var t = "";
+            var tb = document.getElementById("cung");
+            var ngayS = document.getElementById("ngaySinh");
+            var ns = ngayS.value;
+            if(ns===""){
+                alert("Yêu cầu nhập ngay sinh!");
+                ngayS.focus();
+            }
+            var arr = ns.split("/");
+            var ngay= parseInt(arr[0]);
+            var thang = parseInt(arr[1]);
+            if(ngay >= 30 && thang===2){
+                alert("Thang hai khong co 30 ngay");
+            }
+            if(ngay > 31 && thang>12){
+                alert("Ngày nhỏ hơn 31, Tháng nhỏ hơn 12");
+            }
+            switch(thang){
+                case 1: if(ngay > 19) t= "Bảo Bình"; else t = "Ma Kết"; break;
+                case 2: if(ngay>18) t= "Song"; else t= "Bảo Bình"; break;
+                case 3: if(ngay>20) t= "Bạch Dương"; else t="Song";break;
+                case 4: if(ngay>20) t= "Kim Ngư"; else t= "Bạch Dương"; break;
+                case 5: if(ngay>20) t= "Song Tử"; else t="Kim Ngư"; break;
+                case 6: if(ngay>21) t= "Cự Giải"; else t="Song Tử"; break;
+                case 7: if(ngay>22) t="Sư Tử"; else t="Cự Giải"; break;
+                case 8: if(ngay>22) t="Xử Nữ"; else t="Sư Tử"; break;
+                case 9: if(ngay>22) t="Thiên Bình"; else t="Xử Nữ";break;
+                case 10: if(ngay>23) t="Bọ Cạp"; else t="Thiên Bình"; break;
+                case 11: if(ngay>22) t="Nhân Mã"; else t="Bọ Cạp"; break;
+                case 12: if(ngay>21) t="Ma Kết"; else t="Nhân Mã"; break;
+            }
+
+            tb.setAttribute("value",t);
+        }
+
+        function reSet(){
+            document.getElementById("cung").value="";
+            document.getElementById("ngaySinh").value="";
+        }
+    </script>
+
+</head>
+
+<body>
+    <table>
+        <tr><td>Ngày sinh </td>
+            <td><input type="text" id="ngaySinh"></td>
+        </tr>
+        <tr>
+            <td>Cung </td>
+            <td><input type="text" id="cung"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <div class="bt">
+                    <input type="button" value="Xem" onclick="xemCung();">
+                    <input type="button" value="Xóa" onclick="reSet();";>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

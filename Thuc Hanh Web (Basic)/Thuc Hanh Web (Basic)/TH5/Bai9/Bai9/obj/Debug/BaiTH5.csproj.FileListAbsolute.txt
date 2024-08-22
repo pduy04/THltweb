@@ -1,0 +1,3 @@
+F:\UNIVERSITY\Ltr Web\ThucHanh\TH5\Bai9\Bai9\obj\Debug\BaiTH5.csprojAssemblyReference.cache
+F:\UNIVERSITY\Ltr Web\ThucHanh\TH5\Bai9\Bai9\obj\Debug\Bai9.dll
+F:\UNIVERSITY\Ltr Web\ThucHanh\TH5\Bai9\Bai9\obj\Debug\Bai9.pdb

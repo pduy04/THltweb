@@ -1,0 +1,18 @@
+ .bang table, .bang table td, .nhap table{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 10px;
+}
+.nhap .btn{
+    float: right;
+}
+
+.bang,.nhap{
+    margin-left: 100px;
+}
+
+
+.content{
+    display: flex;
+    
+}

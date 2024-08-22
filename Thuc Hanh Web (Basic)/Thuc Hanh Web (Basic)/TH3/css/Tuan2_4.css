@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+.col-m-6 {
+    width: 50%;
+}
+html {
+    font-family: "Time New Romans", sans-serif;
+    background-color: rgba(133, 124, 124, 0.36);
+}
+.header {
+    background-color: #1B87F6;
+    color: #fff;
+    padding: 15px;
+}
+a{
+    color: violet;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+}
+h3:hover {
+    color: rgba(192, 123, 123, 0.43);
+}
+nav{
+    background-color: #48C6F3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-bottom: 20px;
+}
+.menu {
+    padding: 0px;
+    font-size: 15px;
+}
+.menu ul {
+    list-style-type: none;
+}
+.menu ul li {
+    text-align: center;
+    background-color: #48C6F3;
+    padding: 10px;
+    color: #ffffff;
+}
+.menu ul li:hover {
+    position: relative;
+    background-color: rgba(12, 97, 123, 0.65);
+}
+.menu ul li ul {
+    visibility: hidden;
+    position: absolute;
+}
+.menu ul li:hover ul {
+    visibility: visible;
+    width: 100%;
+    top: 37px;
+    left: 0px;
+}
+.menu ul li:hover ul li {
+    text-align: center;
+    padding: 15px 25px;
+    background-color: #B8B1B1;
+    color: #630B0B;
+}
+.menu ul li:hover ul li:hover {
+    background-color: rgb(33, 174, 218);
+}
+#timkiem:hover{
+    background-color: #FF0055;
+}
+.sach {
+    background-color: #ffffff;
+}
+.sach .title {
+    margin-left: 5%;
+    margin-top: 5px;
+    padding: 7px;
+    font-size: 25px;
+}
+footer {
+    background-color: #48C6F3;
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+}
+@media only screen and (max-width: 768px){
+    .details {
+        padding: 0px;
+        height: 380px;
+    }
+    .sach {
+        border: 1px solid black;
+        width: 95%;
+        height: 97%;
+    }
+    .sach img {
+        margin-left: 7%;
+        width: 86%;
+        height: 83%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}.col-2 {width: 16.66%;}.col-3 {width: 25%;}.col-4 {width: 33.33%;}.col-5 {width: 41.66%;}.col-6 {width: 50%;} .col-7 {width: 58.33%;}.col-8 {width: 66.66%;}.col-9 {width: 75%;}.col-10 {width: 83.33%;}.col-11 {width: 91.66%;}.col-12 {width: 100%;}
+    
+    #search {
+        display: block;
+        width: 100%;
+    }
+    .details {
+        padding: 0px;
+        height: 315px;
+    }
+    .sach {
+        border: 1px solid black;
+        width: 93%;
+        height: 95%;
+    }
+    .sach img {
+        margin-left: 7%;
+        width: 86%;
+        height: 80%;
+    }
+}

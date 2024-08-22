@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/StyleSheet1.css" rel="stylesheet" />
+    <title>Them Nhan vien</title>
+    <script>
+        function ktra() {
+            var ipTen = document.getElementById("ipTen").value;
+            var ipDate = document.getElementById("ipDate").value;
+            var errTen = document.getElementById("errTen");
+            var errDate = document.getElementById("errDate");
+            var nam = new Date(ipDate)
+            if (ipTen == "") {
+                errTen.innerHTML = "Không được để tên bị trống";
+                return false;
+            }
+            if (!ipDate) {
+                errDate.innerHTML = "Không được để ngày trống";
+                return false
+            } else if (nam.getFullYear() > 2000) {
+                errDate.innerHTML = "Chưa đủ 18 tuổi!";
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="XuLy.aspx" method="post" class="form" onsubmit="return ktra()">
+        <span>Họ Tên</span><input id="ipTen" type="text" name="ipTen"> <p id="errTen" style="color: red;"></p>
+        <br>
+        <span>Ngày sinh </span><input id="ipDate" type="date" name="ipDate"> <p id="errDate" style="color: red;"></p>
+        <br>
+        <div>
+            <input type="submit" value="OK">
+            <input type="reset" value="Hủy">
+        </div>
+    </form>
+</body>
+</html>

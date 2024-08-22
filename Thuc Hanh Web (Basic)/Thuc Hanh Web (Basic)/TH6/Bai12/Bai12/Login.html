@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Đăng nhập</title>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        form {
+            width: 350px;
+            margin: auto;
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+            input[type=submit] {
+                width: 100px;
+                height: 35px;
+                margin-left: 230px;
+            }
+
+            input[type=color] {
+                margin-left: 80px;
+            }
+
+            input[type=text] {
+                width: 200px;
+            }
+
+        span {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function check() {
+            var ipTen = document.getElementById("ipUser").value;
+            if (ipTen == "") {
+                errTen.innerHTML = "Không được để tên bị trống";
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="Merger.aspx" onsubmit="return check()">
+        <span>Tên đăng nhập</span><input type="text" id="ipUser" name="ipUser" />
+        <p id="errTen" style="color: red;" ></p>
+        <br />
+        <span>Màu</span><input type="color" name="ipColor" /><br />
+        <input type="submit" value="Đăng nhập" />
+    </form>
+</body>
+</html>

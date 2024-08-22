@@ -1,0 +1,30 @@
+﻿.form {
+    width: 300px;
+    height: 500px;
+    margin: auto;
+}
+
+    .form input[type=text] {
+        margin-left: 20px;
+    }
+
+.table-tt {
+    width: 500px;
+    margin: auto;
+}
+
+    .table-tt table {
+        width: 100%;
+        border: 1px solid gray;
+        text-align: center;
+    }
+
+        .table-tt table td, .table-tt table th {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+    .table-tt button {
+        margin-top: 20px;
+        padding: 5px;
+    }

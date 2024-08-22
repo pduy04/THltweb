@@ -1,0 +1,16 @@
+﻿.nhap table {
+       margin: auto;
+}
+
+.nhap .btn {
+    float: right;
+}
+
+.bang, .nhap {
+    margin-left: 100px;
+}
+
+
+.content {
+    display: flex;
+}

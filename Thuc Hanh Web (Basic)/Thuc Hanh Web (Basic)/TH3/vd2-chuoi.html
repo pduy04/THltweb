@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vd2-chuoi.css">
+    <title>Document</title>
+    <script>
+        function insertOp(){
+            var strs = document.getElementById("inp");
+            var str = strs.value;
+            if(str==""){
+                alert("Mời bạn nhập chuỗi!");
+                strs.focus();
+            }
+            var arr = str.split(",");
+            
+            for(i=0; i<arr.length; i++){
+                var op = document.createElement("option"); 
+                op.setAttribute("value",arr[i]);
+                var t= document.createTextNode(arr[i]);
+                op.appendChild(t);
+                document.getElementById("select").appendChild(op);
+            }
+        }
+        function opSelect(){
+            var sl = document.getElementById("select");
+            var i = sl.selectedIndex;
+            alert("Ban da chon muc: "+sl.options[i].text);
+        }
+
+        function resett(){
+            document.getElementById("tb").reset();
+            var myNode = document.getElementById("select");
+            while (myNode.lastElementChild) {
+                myNode.removeChild(myNode.lastElementChild);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" id="tb">
+    <table >
+        <tr>
+            <td>Chuỗi:</td>
+            <td><input type="text" id="inp"></td>
+        </tr>
+        <tr>
+            <td>Danh sách:</td>
+            <td>
+                <select name="select" id="select" onchange="opSelect();"></select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <div class="bt">
+                    <input type="button" onclick="insertOp();" value="Đồng ý">
+                    <input type="button" value="Hủy" onclick="resett()">
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+
+</body>
+</html>

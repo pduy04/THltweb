@@ -1,0 +1,14 @@
+table{
+    border: 1px solid black;
+    margin: auto;
+    padding: 20px;
+}
+
+#hang, #luu{
+    display: none;
+}
+
+.btn{
+    display: flex;
+    float: right;
+}
